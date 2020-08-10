@@ -21,6 +21,8 @@ module.exports = async function contentfulFetch({
     host: pluginConfig.get(`host`),
     environment: pluginConfig.get(`environment`),
     proxy: pluginConfig.get(`proxy`),
+    httpsAgent: pluginConfig.get(`httpsAgent`),
+    httpAgent: pluginConfig.get(`httpAgent`),
   }
 
   const client = contentful.createClient(contentfulClientOptions)
